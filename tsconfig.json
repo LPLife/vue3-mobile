@@ -1,0 +1,31 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "ESNext",
+    "module": "es2020",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "useDefineForClassFields": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["esnext", "dom"],
+    "incremental": false,
+    "skipLibCheck": true,
+  },
+  "references": [
+    {
+      "path": "./tsconfig.config.json",
+      "~/*": ["src/*"],
+      "#/*": ["types/*"]
+    }
+  ]
+}

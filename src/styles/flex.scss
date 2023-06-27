@@ -1,0 +1,145 @@
+/* 弹性盒布局 */
+.flex-box {
+    display: flex;
+  }
+  
+  /* 主轴方向 */
+  .box-main-axis-horizontal {
+    flex-direction: row;
+  }
+  
+  .box-main-axis-vertical {
+    flex-direction: column;
+  }
+  
+  .box-main-axis-reverse-horizontal {
+    flex-direction: row-reverse;
+  }
+  
+  .box-main-axis-reverse-vertical {
+    flex-direction: column-reverse;
+  }
+  
+  /* 换行 */
+  .box-wrap {
+    flex-wrap: wrap;
+  }
+  
+  .box-nowrap {
+    flex-wrap: nowrap;
+  }
+  
+  .box-wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+  
+  /* 主轴对齐 */
+  .box-justify-content-start {
+    justify-content: flex-start;
+  }
+  
+  .box-justify-content-end {
+    justify-content: flex-end;
+  }
+  
+  .box-justify-content-center {
+    justify-content: center;
+  }
+  
+  .box-justify-content-between {
+    justify-content: space-between;
+  }
+  
+  .box-justify-content-around {
+    justify-content: space-around;
+  }
+  
+  /* 交叉轴对齐 */
+  .box-align-items-start {
+    align-items: flex-start;
+  }
+  
+  .box-align-items-end {
+    align-items: flex-end;
+  }
+  
+  .box-align-items-center {
+    align-items: center;
+  }
+  
+  .box-align-items-baseline {
+    align-items: baseline;
+  }
+  
+  .box-align-items-stretch {
+    align-items: stretch;
+  }
+  
+  /* 交叉轴对齐（多行） */
+  .box-align-content-start {
+    align-content: flex-start;
+  }
+  
+  .box-align-content-end {
+    align-content: flex-end;
+  }
+  
+  .box-align-content-center {
+    align-content: center;
+  }
+  
+  .box-align-content-between {
+    align-content: space-between;
+  }
+  
+  .box-align-content-around {
+    align-content: space-around;
+  }
+  
+  .box-align-content-stretch {
+    align-content: stretch;
+  }
+  
+  /* 元素基本属性 */
+  .box-item {
+    flex: 1 1 auto;
+  }
+  
+  /* 主轴对齐 */
+  .box-item-main-axis-start {
+    align-self: flex-start;
+  }
+  
+  .box-item-main-axis-end {
+    align-self: flex-end;
+  }
+  
+  .box-item-main-axis-center {
+    align-self: center;
+  }
+  
+  .box-item-main-axis-stretch {
+    align-self: stretch;
+  }
+  
+  /* 交叉轴对齐 */
+  .box-item-cross-axis-start {
+    justify-self: flex-start;
+  }
+  
+  .box-item-cross-axis-end {
+    justify-self: flex-end;
+  }
+  
+  .box-item-cross-axis-center {
+    justify-self: center;
+  }
+  
+  .box-item-cross-axis-baseline {
+    justify-self: baseline;
+  }
+  
+  .box-item-cross-axis-stretch {
+    justify-self: stretch;
+  }
+  
