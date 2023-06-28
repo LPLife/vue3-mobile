@@ -50,3 +50,5 @@ pnpm build
 ```sh
 pnpm lint
 ```
+### Requirements
+- Node.js14.18.0+ (推荐nvm管理)

@@ -6,7 +6,6 @@
 import { onMounted, getCurrentInstance } from 'vue';
 
 const vm = getCurrentInstance()?.proxy;
-
 const $echarts = vm?.$echarts;
 onMounted(() => {
   // this.$echarts调用 初始化

@@ -28,7 +28,7 @@ specifiers:
   nprogress: ^0.2.0
   pinia: ^2.0.21
   pinia-plugin-persistedstate: ^3.0.1
-  postcss-px-to-viewport: ^1.1.1
+  postcss-px-to-viewport-8-plugin: ^1.2.2
   postcss-pxtorem: ^6.0.0
   prettier: ^2.7.1
   sass: ^1.56.1
@@ -80,7 +80,7 @@ devDependencies:
   lint-staged: 13.2.2
   mockjs: 1.1.0
   npm-run-all: 4.1.5
-  postcss-px-to-viewport: 1.1.1
+  postcss-px-to-viewport-8-plugin: 1.2.2
   postcss-pxtorem: 6.0.0
   prettier: 2.8.8
   sass: 1.63.4
@@ -4043,11 +4043,10 @@ packages:
       postcss: 5.2.18
     dev: true
 
-  /postcss-px-to-viewport/1.1.1:
-    resolution: {integrity: sha512-2x9oGnBms+e0cYtBJOZdlwrFg/mLR4P1g2IFu7jYKvnqnH/HLhoKyareW2Q/x4sg0BgklHlP1qeWo2oCyPm8FQ==}
+  /postcss-px-to-viewport-8-plugin/1.2.2:
+    resolution: {integrity: sha512-ej1qFciV9jHFCAFf1/R4F7Fh34MjFoFqtr4kW02NZkCayzMRPzmPx/3Mf5f6fhXvZ9NEqULrHREce1rRAUwwLw==}
     dependencies:
       object-assign: 4.1.1
-      postcss: 8.4.24
     dev: true
 
   /postcss-pxtorem/6.0.0:
