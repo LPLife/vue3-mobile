@@ -1,29 +1,33 @@
 <template>
-  <div id="myChart" :style="{ width: '50vw', height: '60vh' }"></div>
+  <div class="test-page">
+    <div v-thousand-separator:1="numberData"></div>
+    <div v-thousand-separator:2="1000.111"></div>
+    <div v-echarts="options" style="width: 60vw; height: 50vh"></div>
+  </div>
 </template>
 
-<script setup>
-import { onMounted, getCurrentInstance } from 'vue';
+<script setup lang="ts">
+import { getItemList } from '@/services/test';
 
-const vm = getCurrentInstance()?.proxy;
-const $echarts = vm?.$echarts;
-onMounted(() => {
-  // this.$echarts调用 初始化
-  let myChart = $echarts.init(document.getElementById('myChart'));
-  // 绘制图表
-  myChart.setOption({
-    tooltip: {},
-    xAxis: {
-      data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
+import { onMounted, onUnmounted, reactive, ref } from 'vue';
+const numberData = ref(1000.1); //
+const options = reactive({
+  tooltip: {},
+  xAxis: {
+    data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
+  },
+  yAxis: {},
+  series: [
+    {
+      name: '销量',
+      type: 'bar',
+      data: [5, 20, 36, 10, 10, 20, 20, 36, 10, 10, 20],
     },
-    yAxis: {},
-    series: [
-      {
-        name: '销量',
-        type: 'bar',
-        data: [5, 20, 36, 10, 10, 20, 20, 36, 10, 10, 20],
-      },
-    ],
-  });
+  ],
 });
+onMounted(async () => {
+  let res = await getItemList();
+  console.log('🚀 ~ file: index.vue:30 ~ onMounted ~ res:', res);
+});
+onUnmounted(() => {});
 </script>

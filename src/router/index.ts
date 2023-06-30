@@ -23,8 +23,8 @@ const router = createRouter({
       meta: { title: '登录' },
     },
     {
-      path: '/test',
-      component: () => import('@/views/Test/index.vue'),
+      path: '/demo',
+      component: () => import('@/views/demo/index.vue'),
       meta: { title: '测试' },
     },
     {
@@ -101,19 +101,14 @@ const router = createRouter({
       component: () => import('@/views/Layout/index.vue'),
       children: [
         {
+          path: '/test',
+          component: () => import('@/views/Test/index.vue'),
+          meta: { title: '测试' },
+        },
+        {
           path: '/home',
           component: () => import('@/views/Home/index.vue'),
           meta: { title: '首页' },
-        },
-        {
-          path: '/article',
-          component: () => import('@/views/Article/index.vue'),
-          meta: { title: '健康百科' },
-        },
-        {
-          path: '/notify',
-          component: () => import('@/views/Notify/index.vue'),
-          meta: { title: '消息通知' },
         },
         {
           path: '/user',
@@ -131,7 +126,7 @@ router.beforeEach((to) => {
   // 获取 token 的
   const store = useUserStore();
   // 白名单
-  const wihteList = ['/login', '/login/callback', '/test'];
+  const wihteList = ['/login', '/login/callback', '/test', '/demo'];
   // 如果你没有token并且不在白名单里面，重定向到登录
   if (!store.user?.token && !wihteList.includes(to.path)) return '/login';
 });

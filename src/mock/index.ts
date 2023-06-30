@@ -3,12 +3,11 @@ import Mock from 'mockjs';
 export default [
   // 模块接口
   {
-    url: '/patient/message/sys/list',
+    url: '/patient/message/sys/list1',
     method: 'GET',
     timeout: '500',
     response: () => {
       const data = [];
-
       for (let i = 0; i < 10; i++) {
         data.push(
           Mock.mock({

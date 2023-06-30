@@ -20,14 +20,8 @@ onMounted(async () => {
           <cp-icon :name="`home-index-${active ? 'active' : 'default'}`"> </cp-icon>
         </template>
       </van-tabbar-item>
-      <van-tabbar-item to="/article">
-        健康百科
-        <template #icon="{ active }">
-          <cp-icon :name="`home-article-${active ? 'active' : 'default'}`"> </cp-icon>
-        </template>
-      </van-tabbar-item>
-      <van-tabbar-item to="/notify" :badge="count || ''">
-        消息通知
+      <van-tabbar-item to="/test" :badge="count || ''">
+        测试
         <template #icon="{ active }">
           <cp-icon :name="`home-notice-${active ? 'active' : 'default'}`"> </cp-icon>
         </template>

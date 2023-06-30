@@ -3,14 +3,18 @@
 This template should help get you started developing with Vue 3 in Vite.    
 
 ## Document 
+- [patient](https://zhousg.github.io/patient-h5-note/)
+- [Vue3](https://cn.vuejs.org/api/)
+- [pinia](https://pinia.web3doc.top/introduction.html)
+- [TypeScript](https://www.tslang.cn/docs/home.html)
 
-[开发文档](https://zhousg.github.io/patient-h5-note/)
 
-![](./public/bg1.png)
-
-## Recommended IDE Setup
+## Recommended IDE Setup(扩展插件)
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- `Eslint`
+- `prettier Eslint`
+- 
 
 ## Type Support for `.vue` Imports in TS
 
@@ -23,9 +27,6 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
     2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
 2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
@@ -51,4 +52,4 @@ pnpm build
 pnpm lint
 ```
 ### Requirements
-- Node.js14.18.0+ (推荐nvm管理)
+- `Node.js14.18.0+ `(推荐使用nvm管理)
