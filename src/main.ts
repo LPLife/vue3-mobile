@@ -10,6 +10,7 @@ import 'vant/lib/index.css';
 import '@/styles/main.scss';
 import 'virtual:svg-icons-register';
 import { registerThousandSeparatorDirective } from '@/directives';
+
 // 只在开发环境中使用 Eruda
 if (process.env.NODE_ENV === 'development') {
   eruda.init();
@@ -17,6 +18,7 @@ if (process.env.NODE_ENV === 'development') {
 const app = createApp(App);
 // 注册全部的自定义指令
 registerThousandSeparatorDirective(app);
+
 app.use(pinia);
 app.use(router);
 app.use(EChartsDirective);

@@ -1,5 +1,7 @@
 <template>
-  <div v-echarts="options" style="width: 400px; height: 300px"></div>
+  <div class="demo-page">
+    <div v-echarts="options" style="width: 100vw; height: 50vh"></div>
+  </div>
 </template>
 
 <script setup lang="ts">

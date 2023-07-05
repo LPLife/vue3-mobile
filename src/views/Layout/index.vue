@@ -14,7 +14,13 @@ onMounted(async () => {
     <!-- 二级路由出口 -->
     <router-view></router-view>
     <van-tabbar route>
-      <van-tabbar-item to="/home">
+      <!-- <van-tabbar-item to="/home">
+        首页
+        <template #icon="{ active }">
+          <cp-icon :name="`home-index-${active ? 'active' : 'default'}`"> </cp-icon>
+        </template>
+      </van-tabbar-item> -->
+      <van-tabbar-item to="/hello">
         首页
         <template #icon="{ active }">
           <cp-icon :name="`home-index-${active ? 'active' : 'default'}`"> </cp-icon>
@@ -26,7 +32,7 @@ onMounted(async () => {
           <cp-icon :name="`home-notice-${active ? 'active' : 'default'}`"> </cp-icon>
         </template>
       </van-tabbar-item>
-      <van-tabbar-item to="/user">
+      <van-tabbar-item to="/demo">
         我的
         <template #icon="{ active }">
           <cp-icon :name="`home-mine-${active ? 'active' : 'default'}`"> </cp-icon>

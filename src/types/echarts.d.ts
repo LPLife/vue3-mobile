@@ -1,5 +1,4 @@
 import { Directive, App, Plugin } from 'vue';
-import type { ECharts } from 'echarts';
 
 const echartsDirective: Directive = {
   mounted(el, binding) {

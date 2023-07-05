@@ -2,7 +2,12 @@ import router from '@/router';
 import { useUserStore } from '@/stores';
 import axios, { AxiosError, type Method } from 'axios';
 import { showToast } from 'vant';
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
 
+NProgress.configure({
+  showSpinner: false,
+});
 export const baseURL = 'https://consult-api.itheima.net/';
 const instance = axios.create({
   // 1. 基础地址，超时时间
@@ -12,6 +17,7 @@ const instance = axios.create({
 
 instance.interceptors.request.use(
   (config) => {
+    NProgress.start();
     // 2. 携带token
     const store = useUserStore();
     if (store.user?.token && config.headers) {
@@ -19,11 +25,16 @@ instance.interceptors.request.use(
     }
     return config;
   },
-  (err) => Promise.reject(err)
+  (err) => {
+    // 处理请求错误
+    NProgress.done();
+    Promise.reject(err);
+  }
 );
 
 instance.interceptors.response.use(
   (res) => {
+    NProgress.done();
     // 3. 处理业务失败
     if (res.data.code !== 10000) {
       // 错误提示
@@ -36,6 +47,8 @@ instance.interceptors.response.use(
     return res.data;
   },
   (err: AxiosError) => {
+    // 处理响应错误
+    NProgress.done();
     // 5. 处理401错误
     if (err.response?.status === 401) {
       // 清除本地的用户信息
